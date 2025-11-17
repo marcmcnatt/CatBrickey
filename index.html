@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Serenity Lake Farm | Memberships by Cat Brickey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Cat Brickey's Serenity Lake Farm memberships – join the herd, glamp, and reset with Highland cows in Upstate South Carolina." />
+  <style>
+    :root {
+      --bg: #faf4ec;
+      --accent: #c0865b;
+      --accent-soft: #f0e1d4;
+      --dark: #2f2b29;
+      --text: #4a433f;
+      --light: #ffffff;
+      --radius-lg: 24px;
+      --radius-pill: 40px;
+      --shadow-soft: 0 14px 32px rgba(0,0,0,0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    img { max-width: 100%; display: block; }
+
+    .page { min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* HEADER / NAV */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: rgba(250,244,236,0.95);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #fef5e9, #c0865b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #fff;
+      box-shadow: var(--shadow-soft);
+    }
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .logo-text span:first-child {
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.11em;
+      color: var(--accent);
+    }
+    .logo-text span:last-child {
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--dark);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 14px;
+    }
+    .nav-links a { opacity: 0.8; }
+    .nav-links a:hover { opacity: 1; }
+    .nav-cta {
+      padding: 7px 16px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+    }
+    .nav-cta.primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    main { flex: 1; }
+    section { padding: 56px 18px; }
+    .section-inner { max-width: 1120px; margin: 0 auto; }
+
+    .pill-heading {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 2.4vw, 2.2rem);
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .section-subtitle {
+      font-size: 0.96rem;
+      max-width: 540px;
+      color: #625951;
+      margin-bottom: 26px;
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 22px;
+      border-radius: var(--radius-pill);
+      border: none;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      transition: 0.15s ease;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: var(--shadow-soft);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+    }
+    .btn-ghost {
+      background: rgba(255,255,255,0.9);
+      color: var(--dark);
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+    .btn-ghost:hover {
+      background: #fff;
+    }
+
+    /* HERO */
+    .hero {
+      padding-top: 60px;
+      padding-bottom: 72px;
+      background:
+        radial-gradient(circle at top left, rgba(192,134,91,0.16), transparent 60%),
+        linear-gradient(to bottom, #faf4ec, #fdfaf6);
+    }
+    .hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      gap: 40px;
+      align-items: center;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.05);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 3.4vw, 3.1rem);
+      line-height: 1.1;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .hero-lead {
+      font-size: 1rem;
+      color: #5a514b;
+      max-width: 520px;
+      margin-bottom: 20px;
+    }
+    .hero-highlight {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+      font-size: 12px;
+    }
+    .hero-highlight span {
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.95);
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .hero-meta {
+      font-size: 12px;
+      color: #6a6159;
+      opacity: 0.9;
+    }
+
+    .hero-card {
+      background: #fff;
+      border-radius: 30px;
+      padding: 20px;
+      box-shadow: var(--shadow-soft);
+    }
+    .hero-photo {
+      border-radius: 22px;
+      min-height: 220px;
+      background: url("your-farm-photo.jpg") center/cover no-repeat;
+      margin-bottom: 14px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-photo::after {
+      content: "Highland cows • Glamping • Lake views";
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      padding: 5px 10px;
+      border-radius: 999px;
+    }
+    .hero-card-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+    .hero-stat {
+      flex: 1;
+      background: var(--bg);
+      border-radius: 16px;
+      padding: 10px 12px;
+      font-size: 13px;
+    }
+    .hero-stat span {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.7;
+      margin-bottom: 2px;
+    }
+    .hero-stat strong {
+      font-size: 15px;
+      color: var(--dark);
+    }
+    .hero-note {
+      font-size: 11px;
+      color: #756b63;
+      margin-top: 6px;
+    }
+
+    /* MEMBERSHIP GRID */
+    .plans {
+      background: radial-gradient(circle at top, #f0e1d4, #faf4ec);
+    }
+    .plans-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .plans-header .section-subtitle {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .plan-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+    .plan-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 22px 20px 24px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .plan-card.popular {
+      border-width: 2px;
+      border-color: var(--accent);
+      position: relative;
+    }
+    .plan-badge {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 10px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      padding: 4px 9px;
+      border-radius: 999px;
+    }
+
+    .plan-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--dark);
+    }
+    .plan-tag {
+      font-size: 0.9rem;
+      color: #6b6057;
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+    .plan-desc {
+      font-size: 0.9rem;
+      color: #625950;
+      margin-bottom: 13px;
+    }
+    .plan-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 18px;
+      font-size: 0.9rem;
+    }
+    .plan-list li {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 7px;
+    }
+    .plan-check {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 1px solid var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .plan-footer-text {
+      font-size: 0.8rem;
+      color: #7a7068;
+      margin-top: 6px;
+    }
+    .plan-card .btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* HOW IT WORKS */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+    .step {
+      background: #fff;
+      border-radius: 20px;
+      padding: 16px 18px 18px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(0,0,0,0.04);
+      font-size: 0.9rem;
+    }
+    .step-number {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .step h3 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: var(--dark);
+    }
+
+    /* CONTACT / FOOTER */
+    .contact {
+      background: #2f2b29;
+      color: #f7f3ec;
+      padding-top: 40px;
+      padding-bottom: 30px;
+    }
+    .contact-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2.2fr 1.8fr;
+      gap: 28px;
+    }
+    .contact h2 {
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+    }
+    .contact p {
+      font-size: 0.9rem;
+      opacity: 0.86;
+    }
+    .contact a { color: #f7f3ec; text-decoration: underline; text-decoration-thickness: 1px; }
+    .contact-list {
+      list-style: none;
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+    .contact-list li { margin-bottom: 6px; }
+
+    .footer {
+      border-top: 1px solid rgba(255,255,255,0.14);
+      margin-top: 16px;
+      padding-top: 14px;
+      font-size: 0.78rem;
+      opacity: 0.76;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .hero-inner { grid-template-columns: minmax(0, 1fr); }
+      .hero-card { order: -1; margin-bottom: 10px; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 800px) {
+      section { padding: 44px 16px; }
+      .plan-grid, .steps, .contact-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header>
+    <nav class="nav">
+      <a href="#top" class="logo-group">
+        <div class="logo-mark">S</div>
+        <div class="logo-text">
+          <span>Cat Brickey's</span>
+          <span>Serenity Lake Farm</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="#membership">Memberships</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+        <a href="#membership" class="nav-cta primary">Apply now</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="badge">
+            <span class="badge-dot"></span> Membership Community • Upstate SC
+          </div>
+          <h1>Life’s better with Highland cows, campfires & a starry lake sky.</h1>
+          <p class="hero-lead">
+            Serenity Lake Farm is Cat Brickey’s 30+ acre farm and glamping retreat, just outside Fountain Inn, SC—where families, founders, and farm-curious folks come to reset.
+          </p>
+          <div class="hero-highlight">
+            <span>Highland cow encounters</span>
+            <span>Wyldstay glamping tents</span>
+            <span>Private lake & quiet woods</span>
+            <span>Members-only events</span>
+          </div>
+          <div class="hero-actions">
+            <a href="#membership" class="btn btn-primary">View Membership Tiers</a>
+            <a href="#contact" class="btn btn-ghost">Talk to Cat</a>
+          </div>
+          <div class="hero-meta">
+            10 minutes from downtown Fountain Inn • Easy drive from Greenville, SC
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="hero-photo"></div>
+          <div class="hero-card-row">
+            <div class="hero-stat">
+              <span>Membership tiers</span>
+              <strong>A, B & C</strong>
+            </div>
+            <div class="hero-stat">
+              <span>Experiences</span>
+              <strong>Glamp • Play • Reset</strong>
+            </div>
+          </div>
+          <p class="hero-note">
+            Memberships include special access to farm days, glamping, and fluffy Highland cow time—curated by Cat Brickey herself.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- MEMBERSHIP PLANS -->
+    <section class="plans" id="membership">
+      <div class="section-inner">
+        <div class="plans-header">
+          <div class="pill-heading">Membership Tiers</div>
+          <h2 class="section-title">Choose how you want to be part of the herd.</h2>
+          <p class="section-subtitle">
+            Each tier gives a different level of connection to Serenity Lake Farm. Start with simple farm days, or go all-in with glamping nights and legacy-level perks.
+          </p>
+        </div>
+
+        <div class="plan-grid">
+
+          <!-- TIER A -->
+          <article class="plan-card">
+            <div>
+              <div class="plan-name">Tier A – Farm Friend</div>
+              <div class="plan-tag">For locals who want regular farm days.</div>
+              <p class="plan-desc">
+                Perfect for nearby families who love hanging with the cows, wandering the property, and unplugging for a few hours at a time.
+              </p>
+              <ul class="plan-list">
+                <li>
+                  <span class="plan-check">✓</span>
+                  <span>Farm day visits for your household (with reservation)</span>
+                </li>
+                <li>
+                  <span class="plan-check">✓</span>
+                  <span>Discounted Highland cow encounters & pasture experiences</span>
+                </li>
+                <li>
+                  <span class="plan-check">✓</span>
+                  <span>Invites to member-only bonfires & seasonal events</span>
+                </li>
+                <li>
+                  <span class="plan-check">✓</span>
+                  <span>Early access to workshops, photo days & holiday happenings</span>
+                </li>
+                <li>
+                  <span class="plan-check">✓</span>
+                  <span>Member email updates about the herd and new happenings</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <!-- Replace # with your JotForm or link -->
+              <a href="#YOUR_TIER_A_FORM" class="btn btn-ghost">Apply for Tier A</a>
+              <p class="plan-footer-text">
+                Best for: local families, grandparents, and folks who want farm days more than overnights.
+              </p>
+            </div>
+          </article>
+
+          <!-- TIER B -->
+          <article class="plan-card popular">
+            <div class="plan-badge">Most popular</div>
+            <div>
+              <div class="plan-name">Tier B – Wyldstay Weekender</div>
+              <div class="plan-tag">Your go-to escape for glamping + cows.</div>
+              <p class="plan-desc">
+                Built for families and couples who want overnight stays baked right into the membership, plus full access to the farm rhythm.
+              </p>
+              <ul class="plan-list">
+                <li>
+                  <span class="plan-check">✓</span>
+                  <span>Glamping nights at Wyldstay included each year</span>
+                </li>
+                <li>
+                  <span class="plan-check">✓</span>
+                  <span>Priority booking for weekends, school breaks & special dates</span>
+                </li>
+                <li>
+                  <span class="plan-check">✓</span>
+                  <span>Farm day visits for your household (with reservation)</span>
+                </li>
+                <li>
+                  <span class="plan-check">✓</span>
+                  <span>Extra stay perks: s’mores kits, firewood bundles & Cat-style surprises</span>
+                </li>
+                <li>
+                  <span class="plan-check">✓</span>
+                  <span>Member pricing on photo sessions, dinners & mini-retreats</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <a href="#YOUR_TIER_B_FORM" class="btn btn-primary">Apply for Tier B</a>
+              <p class="plan-footer-text">
+                Best for: out-of-town families, tired parents, and couples who crave a regular reset.
+              </p>
+            </div>
+          </article>
+
+          <!-- TIER C -->
+          <article class="plan-card">
+            <div>
+              <div class="plan-name">Tier C – Founding Herd Member</div>
+              <div class="plan-tag">For the superfans who want deeper roots here.</div>
+              <p class="plan-desc">
+                A legacy-level membership for people who want Serenity Lake Farm to be “their” place in a bigger way—for family, friends, or even their brand.
+              </p>
+              <ul class="plan-list">
+                <li>
+                  <span class="plan-check">✓</span>
+                  <span>Additional glamping nights to spread across the year</span>
+                </li>
+                <li>
+                  <span class="plan-check">✓</span>
+                  <span>Guest passes so friends, clients or collaborators can join you</span>
+                </li>
+                <li>
+                  <span class="plan-check">✓</span>
+                  <span>Priority access to new builds (living pool, cabins & future stays)</span>
+                </li>
+                <li>
+                  <span class="plan-check">✓</span>
+                  <span>One private “bring your people” farm gathering per year</span>
+                </li>
+                <li>
+                  <span class="plan-check">✓</span>
+                  <span>A legacy touch on the land (like naming a tree or calf in the Founding Herd)</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <a href="#YOUR_TIER_C_FORM" class="btn btn-ghost">Join Tier C Waitlist</a>
+              <p class="plan-footer-text">
+                Best for: super-fans, legacy-minded families, and creative/brand partners who want an ongoing home base.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align:center; margin-top:24px; font-size:0.9rem; color:#655c55;">
+          Not sure which tier fits you? Tell us how often you’d like to visit, and we’ll recommend the best fit before anything is final.
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works">
+      <div class="section-inner">
+        <div class="pill-heading">How it works</div>
+        <h2 class="section-title">Joining the Serenity herd is simple.</h2>
+        <p class="section-subtitle">
+          Memberships are intentionally limited, so the farm always feels calm, never crowded. Here’s how we bring new humans into the herd:
+        </p>
+
+        <div class="steps">
+          <article class="step">
+            <div class="step-number">1</div>
+            <h3>Choose your tier</h3>
+            <p>
+              Pick Tier A, B or C based on how often you want to visit and whether you want glamping nights built into your year.
+            </p>
+          </article>
+          <article class="step">
+            <div class="step-number">2</div>
+            <h3>Submit your application</h3>
+            <p>
+              Fill out the quick form (linked in each tier) so Cat can learn about your family, your lifestyle, and how you hope to use the farm.
+            </p>
+          </article>
+          <article class="step">
+            <div class="step-number">3</div>
+            <h3>Confirm & book your first visit</h3>
+            <p>
+              Once your membership is confirmed and pricing shared, you’ll receive member-only links to book farm days, glamping nights, and experiences.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CONTACT / FOOTER -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div>
+        <div class="pill-heading" style="color:#f0e1d4;">Get in touch</div>
+        <h2>Ready to plan your Serenity escape?</h2>
+        <p>
+          Share which tier you’re curious about, who you’re bringing (kids, friends, team, or all of the above), and when you’d love to visit.
+        </p>
+        <ul class="contact-list">
+          <li>Email: <a href="mailto:YOUR-EMAIL-HERE">YOUR-EMAIL-HERE</a></li>
+          <li>Instagram: <a href="https://www.instagram.com/wyldstaygvl" target="_blank">@wyldstaygvl</a></li>
+        </ul>
+      </div>
+      <div>
+        <p>
+          Serenity Lake Farm is a living legacy project for Cat’s kids, Tim and Teagan—and for families like yours who need a place to breathe, play, and remember what matters.
+          Your membership directly supports the care of the land, the animals, and the dream being built here.
+        </p>
+        <div class="footer">
+          © <span id="year"></span> Serenity Lake Farm. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
